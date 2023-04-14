@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #d5d5d5;
+      font-family: system-ui;
+      font-size: 15px;
+    }
+
+    .container {
+      background-color: #e9e7ea;
+      /* width: 1000px; */
+      max-width: 100%;
+      margin: auto;
+      /* padding:50px; */
+      box-shadow: 0 10px 50px #858585;
+      display: grid;
+      grid-template-columns: 35% 60%;
+      column-gap: 5%;
+      row-gap: 30px;
+    }
+
+    .avatar img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      padding-bottom: 20px;
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0 0 20px;
+    }
+
+    .name {
+      padding-left: 30px;
+      padding-bottom: 50px;
+    }
+
+    .name h2,
+    p {
+      text-align: center;
+      line-height: 15px;
+    }
+
+    .contact ul {
+      list-style: none;
+      padding-left: 60px;
+      font-size: 15px;
+      line-height: 50px;
+      padding-bottom: 30px;
+    }
+
+
+
+    svg {
+      padding-right: 30px;
+      padding-left: 50px;
+      vertical-align: middle;
+    }
+
+    .style {
+      /* padding-bottom: 30px; */
+      background-color: #e9e7ea;
+      color: #000;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      margin-left: 20px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .style h2 {
+      margin: 0 auto;
+      letter-spacing: 2px;
+    }
+
+    .skills {
+      padding-left: 50px;
+    }
+
+    .skills ul {
+      padding-left: 80px;
+      padding-bottom: 20px;
+      font-size: 15px;
+      line-height: 50px;
+    }
+
+    .education {
+      padding-left: 50px;
+    }
+
+    .education ul {
+      padding-left: 80px;
+      font-size: 15px;
+      line-height: 50px;
+    }
+
+
+
+    .profile {
+      padding: 90px 20px 50px 0;
+      text-align: justify;
+    }
+
+    .experience {
+      padding: 50px 20px 50px 0;
+      text-align: justify;
+    }
+
+    .experience .item {
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .experience .item::before {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      content: "";
+      /* border-radius: 50%; */
+      left: -37px;
+      top: 5px;
+    }
+
+    .project {
+      padding: 50px 20px 50px 0;
+      text-align: justify;
+    }
+
+    .project h4 {
+      margin: 20px 0 10px;
+      font-weight: 600;
+    }
+
+    .project .web {
+      color: #5715f1;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    .project .position {
+      font-weight: 500;
+      padding-bottom: 10px;
+    }
+
+    .project .item {
+      position: relative;
+    }
+
+    .project .item::before {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #000;
+      content: "";
+      /* border-radius: 50%; */
+      left: -37px;
+      top: 5px;
+    }
+
+    .time {
+      margin: 6px 0 6px 0;
+    }
+
+    .font {
+      color: #E7E7E7;
+      font-weight: 300;
+    }
+
+    .font svg {
+      color: #E7E7E7;
+      font-weight: 300;
+    }
+
+    .title {
+      letter-spacing: 2px;
+
+    }
+
+    .left {
+      background-color: black;
+      width: 100%;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="avatar">
+        <img src="https://demoda.vn/wp-content/uploads/2022/01/anh-avatar-hai-chu-khi-cuoi.jpg" alt="" />
+      </div>
+
+      <div class="name">
+        <h2>Đoàn Đức Bảo Nguyên</h2>
+        <p>Front End Developer</p>
+      </div>
+      <div class="style">
+        <h2 class="title">CONTACT</h2>
+      </div>
+      <div class="contact">
+        <ul class="font">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="#E7E7E7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-smartphone">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            0702770099
+
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="#E7E7E7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-mail">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            baonguyen@gmail.com
+          </li>
+
+          <li>
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="#E7E7E7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-map-pin">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Đà Nẵng, Việt Nam</span>
+          </li>
+          <li style="cursor: pointer; color: #5715f1">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="#E7E7E7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-globe">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+              </svg>
+              abcxyz.com</span>
+          </li>
+        </ul>
+      </div>
+      <div class="style">
+        <h2>SKILLS</h2>
+      </div>
+      <div class="skills">
+        <ul class="font">
+          <li>PHP</li>
+          <li>JAVA</li>
+          <li>C++</li>
+          <li>Angular</li>
+          <li>React</li>
+        </ul>
+      </div>
+      <div class="style">
+        <h2>EDUCATION</h2>
+      </div>
+      <div class="education">
+        <ul class="font">
+          <li>ABC - 2017</li>
+          <li>XYZ - 2020</li>
+      </div>
+    </div>
+    <div class="right">
+      <div class="profile">
+        <h2 class="title">PROFILE</h2>
+        <hr>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, porro corrupti voluptatum perferendis quae
+        consequuntur repellendus recusandae tenetur omnis commodi accusantium itaque maiores tempora inventore rem
+        accusamus a ipsa? Animi.
+      </div>
+      <div class="experience">
+        <h2 class="title">EXPERIENCE</h2>
+        <hr>
+        <div class="item">
+          <h4>Front End Developer</h4>
+          Napa Global
+          <div class="time">
+            <span>01/01/2020 - 01/01/2023</span>
+          </div>
+          <div class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            culpa veritatis dolorem natus aspernatur ratione architecto
+            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+            cumque, ut itaque debitis dolores sapiente!
+          </div>
+        </div>
+        <div class="item">
+          <h4>Front End Developer</h4>
+          Napa Global
+          <div class="time">
+            <span>01/01/2020 - 01/01/2023</span>
+          </div>
+          <div class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            culpa veritatis dolorem natus aspernatur ratione architecto
+            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+            cumque, ut itaque debitis dolores sapiente!
+          </div>
+        </div>
+      </div>
+
+      <div class="project">
+        <h2 class="title">PROJECTS</h2>
+        <hr>
+        <div class="item">
+          <h4>New Project</h4>
+          <div class="time">
+            <span>01/01/2020 - 01/01/2023</span>
+          </div>
+          <div class="web">abcxyz.com</div>
+          <div class="position">Front End Developer</div>
+          <div class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            mollitia deserunt ad corporis voluptate voluptatem optio nesciunt
+            a aut, accusantium fugit repudiandae ut iure molestiae eos modi.
+            Odit, eaque delectus.
+          </div>
+        </div>
+        <div class="item">
+          <h4>New Project</h4>
+          <div class="time">
+            <span>01/01/2020 - 01/01/2023</span>
+          </div>
+          <div class="web">abcxyz.com</div>
+          <div class="position">Front End Developer</div>
+          <div class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            mollitia deserunt ad corporis voluptate voluptatem optio nesciunt
+            a aut, accusantium fugit repudiandae ut iure molestiae eos modi.
+            Odit, eaque delectus.
+          </div>
+        </div>
+        <div class="item">
+          <h4>New Project</h4>
+          <div class="time">
+            <span>01/01/2020 - 01/01/2023</span>
+          </div>
+          <div class="web">abcxyz.com</div>
+          <div class="position">Front End Developer</div>
+          <div class="des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+            mollitia deserunt ad corporis voluptate voluptatem optio nesciunt
+            a aut, accusantium fugit repudiandae ut iure molestiae eos modi.
+            Odit, eaque delectus.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+@use '@/assets/styles/scss/global/global.scss' as *;
+.design-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    .nav_edit {
+        width: 100%;
+    }
+}
+
+.show-template {
+    position: absolute;
+    z-index: 9999;
+    background: #f2f7fc;
+    width: 100%;
+    height: 100%;
+
+    & .close-template {
+        width: 100%;
+        padding-top: 32px;
+        z-index: 9999;
+        margin-bottom: 33px;
+        display: flex;
+        justify-content: center;
+        background: #f2f7fc;
+        position: relative;
+        & button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: transparent;
+            position: absolute;
+            left: 0;
+            top: 34px;
+        }
+        &__text {
+            font-family: 'Fira Code';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 45px;
+            color: #000000;
+        }
+        &__tabs {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.design-cv {
+    @include main-title;
+    display: flex;
+    margin-bottom: 111px;
+    padding: 38px 164px 0 79px;
+    width: 100%;
+    &__left {
+        min-width: 200px;
+        font-size: 18px;
+        line-height: 23px;
+
+        & .list {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
+            margin-bottom: 13px;
+        }
+        & .btn-change {
+            color: $btn-main-bg;
+            margin-bottom: 27px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            & img {
+                margin-right: 6px;
+            }
+        }
+        & .btn-items {
+            display: flex;
+        }
+        & button {
+            cursor: pointer;
+            display: flex;
+            background: transparent;
+            font-family: 'Inter';
+            border: none;
+            outline: none;
+            display: block;
+            margin-bottom: 13px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.7);
+            & .dots {
+                height: 22px;
+                width: 22px;
+                border-radius: 50%;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-right: 5px;
+                position: relative;
+            }
+        }
+    }
+
+    .design-cv__close {
+        background: #fff;
+        z-index: 9;
+        position: fixed;
+        right: 16px;
+        bottom: 40px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        .close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+
+    &__right {
+        width: calc(100% - 300px);
+        min-height: 1112px;
+        background: #fff;
+        margin-left: 135px;
+    }
+
+    .design-cv__icon--open {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 35px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 22px;
+        }
+    }
+}
+
+@keyframes toggleMenu {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    .design-cv__icon,
+    .design-cv__close {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 888px) and (max-width: 1280px) {
+    .design-cv {
+        height: 100%;
+        &__right {
+            margin-right: 20px;
+            margin-left: 0;
+        }
+    }
+
+    .show-template {
+        width: 100%;
+        .close-template {
+            & button {
+                left: 10px;
+                top: 40px;
+            }
+        }
+    }
+    .design-cv__icon,
+    .design-cv__close {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 887px) {
+    .design-cv {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            padding-left: 30px;
+        }
+        &__right {
+            width: 93%;
+            margin: 0 30px;
+        }
+    }
+    .show-template {
+        width: 100%;
+        .close-template {
+            & button {
+                left: 10px;
+                top: 40px;
+            }
+        }
+    }
+    .design-cv__icon,
+    .design-cv__close {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 693px) and (max-width: 767px) {
+    .design-cv {
+        display: flex;
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            padding-left: 0;
+        }
+        &__right {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    .show-template {
+        width: 100%;
+        left: 0;
+        .close-template {
+            & button {
+                left: 20px;
+                top: 40px;
+            }
+        }
+    }
+    .design-cv__icon,
+    .design-cv__close {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-logo {
+        display: none;
+    }
+    .design-cv {
+        padding: 38px 16px 0 16px;
+        display: flex;
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            padding-left: 0;
+            display: none;
+        }
+        &__right {
+            height: 550px;
+            min-height: auto;
+            width: 100%;
+            margin-top: 0;
+            background: none;
+        }
+    }
+    .show-template {
+        width: 100%;
+        left: 0;
+        .close-template {
+            & button {
+                left: 20px;
+                top: 40px;
+            }
+        }
+    }
+    .design-cv__icon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 599px) and (max-width: 693px) {
+    .nav-logo {
+        display: none;
+    }
+    .design-cv__left {
+        display: none;
+    }
+    .show-template {
+        .close-template {
+            &__text {
+                font-size: 35px;
+            }
+        }
+    }
+    .design-cv__icon,
+    .design-cv__close {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+    .nav-logo {
+        display: none;
+    }
+    .design-cv {
+        padding: 0;
+        &_left {
+            display: none;
+        }
+    }
+
+    .nav_edit {
+        margin-bottom: 35px;
+    }
+
+    .show-template {
+        .close-template {
+            &__text {
+                font-size: 20px;
+            }
+        }
+    }
+    .design-cv__icon {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 598px) {
+    .nav-edit {
+        margin-bottom: 35px;
+    }
+    .button-save {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        width: 117px;
+        gap: 10px;
+        float: right;
+        margin: 0 0 32px 0 !important;
+        justify-content: center !important;
+    }
+    .design-cv {
+        margin-bottom: 0;
+        height: 90vh;
+        &_left {
+            display: none;
+        }
+        .open-menu {
+            display: block;
+            padding-left: 0;
+            position: fixed;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            right: 59px;
+            padding: 32px 0 0 74px;
+            z-index: 9;
+            animation: toggleMenu 0.3s linear;
+        }
+
+        & .overlay.open {
+            position: fixed;
+            background-color: #b3b3b3;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        &__right {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .show-template {
+        .close-template {
+            & button {
+                top: 43px;
+                left: 20px;
+            }
+            & img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .design-cv__icon {
+        display: block;
+    }
+}

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box !important;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+html {
+    font-size: 16px;
+    @include mobile {
+        font-size: 15px;
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f2f7fc;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: unset;
+}
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+}
+input,
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input,
+.input-mui {
+    border: 2px solid transparent !important;
+
+    &:focus {
+        border: 2px solid #2a3ffb !important;
+        outline: none;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wrapper {
+    width: 100%;
+    background: #f2f7fc;
+}
+.button--primary {
+    background-color: #2a3ffb;
+    color: #fff;
+    &:hover {
+        scale: 1.05;
+    }
+}
+
+.title {
+    font-family: 'Fira Code', monospace;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.text-field {
+    font-family: 'Roboto', sans-serif;
+    padding: 13px 15px;
+    width: 400px;
+    background: #ffffff;
+    font-size: 16px;
+    height: 48px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.title-sm {
+    font-size: 18px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 5px rgba(119, 186, 237, 0.36);
+    border-radius: 0;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.source-san-pro {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+.invalid {
+    border: 1px solid #fb4458 !important;
+}
+
+.layout__flex {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page__gloss {
+    text-align: center;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fb2fff;
+}
+
+.page__title {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
+    color: #000000;
+    margin-top: 17px;
+    height: 46px;
+}
+
+.button {
+    padding: 16px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) and (min-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .page__gloss {
+        font-size: 13px;
+        line-height: 21px;
+        height: 21px;
+    }
+
+    .page__title {
+        font-size: 22px;
+        line-height: 25px;
+        height: 25px;
+        margin-top: 18px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .text-field {
+        width: 100%;
+    }
+    #cv-area {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+body.bg-print {
+    background: var(--background);
+}

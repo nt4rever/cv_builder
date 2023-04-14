@@ -1,0 +1,129 @@
+@import '@/assets/styles/scss/global/_mixins.scss';
+
+.root {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: #00000080;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: transparent;
+        width: 30px;
+        height: 100%;
+        top: 0;
+        right: -30px;
+    }
+}
+
+.container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-areas:
+        'title subtitle'
+        'website website'
+        'time time'
+        'time time'
+        'text text'
+        'text text';
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    gap: 2px;
+
+    @include mobile {
+        grid-template-areas:
+            'title'
+            'subtitle'
+            'website'
+            'time'
+            'time'
+            'text'
+            'text';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    input {
+        padding: 14px 12px;
+        width: 100%;
+        border-color: transparent;
+
+        &:focus {
+            outline: none;
+            border-radius: 0 !important;
+            border-color: transparent !important;
+        }
+    }
+
+    .title {
+        grid-area: title;
+    }
+
+    .subtitle {
+        grid-area: subtitle;
+    }
+
+    .website {
+        grid-area: website;
+    }
+
+    .time {
+        grid-area: time;
+        background: #fff;
+        padding: 14px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .text {
+        padding: 14px 12px 0 12px;
+        grid-area: text;
+        background: #fff;
+    }
+}
+
+.timePicker {
+    display: flex;
+
+    .label {
+        margin-right: 60px;
+    }
+
+    .current {
+        display: flex;
+        gap: 5px;
+
+        span {
+            color: #000000;
+        }
+    }
+}
+
+.action {
+    position: absolute;
+    right: -30px;
+    top: 10px;
+    visibility: hidden;
+    z-index: 2;
+
+    @include mobile {
+        top: 12px;
+        right: 5px;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: block !important;
+    }
+}
+
+.root:hover .action {
+    visibility: visible;
+}

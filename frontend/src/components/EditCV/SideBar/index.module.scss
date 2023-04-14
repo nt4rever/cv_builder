@@ -1,0 +1,89 @@
+@import '@/assets/styles/scss/global/_mixins.scss';
+
+.root {
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.7);
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &.disable .heading,
+    .childItem {
+        &:after {
+            content: '';
+        }
+    }
+}
+
+.childrenContainer {
+    margin-left: 12px;
+    margin-top: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.heading,
+.childItem {
+    position: relative;
+    padding-right: 20px;
+
+    p {
+        width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &:after {
+        content: url(/assets/img/hoverItem.svg);
+        position: absolute;
+        right: 0px;
+        top: 0;
+        bottom: 0;
+        visibility: hidden;
+    }
+}
+
+.item:hover .heading {
+    &:after {
+        visibility: visible;
+    }
+}
+
+.addSection {
+    font-size: 14px;
+    line-height: 22px;
+    color: #2a3ffb;
+    cursor: pointer;
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .heading p {
+        width: 100%;
+    }
+}

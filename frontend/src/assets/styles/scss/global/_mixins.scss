@@ -1,0 +1,150 @@
+@import './variables';
+
+@mixin flex($align-item, $justify-content) {
+    display: flex;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin main-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: $txt-main-color;
+}
+@mixin large-title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: $txt-main-color;
+}
+@mixin title-field {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: $txt-main-color;
+    margin-bottom: 12px;
+}
+@mixin txt-type-field {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: $txt-main-color;
+    outline: none;
+}
+@mixin padding-job-edu {
+    width: 100%;
+    margin-right: 130px;
+}
+@mixin padding-btn-add {
+    font-family: 'Inter', sans-serif;
+    background: $main-bg;
+    color: $txt-more-color;
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid $txt-more-color;
+    cursor: pointer;
+}
+@mixin padding-btn-more {
+    font-family: 'Inter', sans-serif;
+    background: $main-bg;
+    padding: 12px 40px 12px 11px;
+    border: 2px solid transparent;
+    outline: none;
+    font-weight: 400;
+    font-size: 13px;
+    color: $txt-main-color;
+    line-height: 22px;
+}
+@mixin placeholder-style {
+    font-family: 'Inter';
+    font-size: 13px;
+    line-height: 22px;
+    color: $txt-second-color;
+}
+@mixin title-field {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+@mixin txt-type-field {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: $txt-main-color;
+    border: 2px solid transparent !important;
+    outline: none;
+}
+@mixin txt-addsmall {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    color: $txt-second-color;
+    margin-bottom: 3px;
+}
+@mixin txt-addnormal {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    color: $txt-second-color;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+@mixin txt-addlarge {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+@mixin padding-job-edu {
+    width: 100%;
+    padding: 11px 0 11px 11px;
+    margin-right: 130px;
+}
+@mixin padding-btn-add {
+    font-family: 'Inter', sans-serif;
+    background: $main-bg;
+    color: $txt-more-color;
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid $txt-more-color;
+    cursor: pointer;
+}
+@mixin main-btn {
+    color: $txt-white;
+    background: $btn-main-bg;
+    border-radius: 8px;
+    padding: 17px 70px;
+    font-size: 15px;
+    line-height: 15px;
+}
+@mixin box {
+    border-radius: 6px;
+    padding: 32px 40px;
+    background: $main-bg;
+}
+@mixin common-border-focus {
+    box-sizing: border-box !important;
+    border: 2px solid $btn-main-bg !important;
+    border-radius: 4px !important;
+}

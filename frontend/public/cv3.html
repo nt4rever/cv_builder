@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #d5d5d5;
+            font-family: system-ui;
+            font-size: 15px;
+        }
+
+        .container {
+            background-color: #e9e7ea;
+            /* width: 1000px; */
+            max-width: 100%;
+            margin: auto;
+            position: relative;
+            box-shadow: 0 10px 50px #858585;
+            display: grid;
+            grid-template-columns: 35% 65%;
+
+        }
+
+        .avatar img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            /* border-radius: 50%; */
+            border: 1px solid #AA9A6F;
+
+        }
+
+        .avatar {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0 0 20px;
+        }
+
+        svg {
+            padding-right: 20px;
+            vertical-align: middle;
+        }
+
+        .time {
+            margin: 6px 0 6px 0;
+        }
+
+        .left {
+            background-color: #181516;
+            width: 100%;
+            color: white;
+        }
+
+        .right {
+            width: 100%;
+            position: relative;
+        }
+
+        .top {
+            background-color: #000;
+            height: 45vh;
+            position: absolute;
+            max-width: 100%;
+            width: 100%;
+            top: 0;
+        }
+
+        .profile {
+            background-color: #AA9A6F;
+            vertical-align: middle;
+            position: absolute;
+            z-index: 1;
+            height: auto;
+            margin-top: 70px;
+            margin-left: 50px;
+        }
+
+        .intro {
+            color: #AA9A6F;
+            position: absolute;
+            z-index: 1;
+            margin-top: 170px;
+            margin-left: 50px;
+            font-weight: 400;
+            width: 550px;
+            height: 30px;
+        }
+
+        .rec {
+            background-color: #AA9A6F;
+            position: absolute;
+            z-index: 1;
+            right: 0px;
+            width: 300px;
+            height: 30px;
+        }
+
+        .rec1 {
+            background-color: #AA9A6F;
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+
+            width: 300px;
+            height: 30px;
+        }
+
+        .rec2 {
+            background-color: #AA9A6F;
+            position: absolute;
+            z-index: 1;
+            top: 400px;
+            width: 20px;
+            height: 500px;
+            left: -10px;
+        }
+
+        .rec3 {
+            background-color: #AA9A6F;
+            position: absolute;
+            z-index: 1;
+            width: 30px;
+            height: 300px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .contact {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 115px;
+        }
+
+        .contact-info {
+            border: 1px solid #AA9A6F;
+            width: 250px;
+            height: 50px;
+            margin-bottom: 10px;
+            color: #AA9A6F;
+
+
+        }
+
+        .contact-info p {
+            padding-left: 30px;
+        }
+
+        .skills {
+            display: inline-block;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 115px;
+            color: #AA9A6F;
+        }
+
+        .skills-info {
+            border: 1px solid #AA9A6F;
+            width: 250px;
+            height: auto;
+            padding-bottom: 30px;
+        }
+
+        .skills-info h3,
+        p {
+            padding-left: 30px;
+        }
+
+        .skills-level {
+            width: 100%;
+            display: flex;
+        }
+
+        .skills-level .skills-level-left {
+            margin-left: 30px;
+        }
+
+        .skills-level .skills-level-right {
+            margin-right: 20px;
+        }
+
+        .skills-level-left {
+            background-color: #AA9A6F;
+            float: left;
+            height: 15px;
+        }
+
+        .skills-level-right {
+            float: right;
+            background-color: #000;
+            border: 1px solid #AA9A6F;
+            height: 13px;
+            border-end-end-radius: 30px;
+        }
+
+        .skills-info hr {
+            margin-left: 30px;
+            margin-right: 30px;
+            border-color: #AA9A6F;
+        }
+
+        .experience {
+            position: relative;
+            margin: 400px 30px 20px 40px;
+        }
+
+        .title p {
+            border: 1px solid #000;
+            text-align: center;
+            width: 30%;
+            padding: 5px;
+            height: 30px;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+
+        .education {
+            margin: 60px 30px 20px 40px;
+        }
+
+        .follow {
+            border: 1px solid #AA9A6F;
+            width: 250px;
+            height: 100px;
+            margin-left: 115px;
+            color: #AA9A6F;
+        }
+
+        .follow p {
+            padding-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="left">
+            <div class="avatar">
+                <img src="https://demoda.vn/wp-content/uploads/2022/01/anh-avatar-hai-chu-khi-cuoi.jpg" alt="" />
+            </div>
+
+            <div class="contact">
+                <div class="contact-info">
+                    <p>SURNAME@GMAIL.COM</p>
+                </div>
+                <div class="contact-info">
+                    <p>0702 770099</p>
+                </div>
+                <div class="contact-info">
+                    <p>WWW.SURNAME.COM</p>
+                </div>
+            </div>
+            <div class="skills">
+
+                <div class="skills-info">
+                    <h3>SKILLS</h3>
+                    <p>SKill 1</p>
+                    <div class="skills-level">
+                        <div class="skills-level-left" style="width: 70%;"></div>
+                        <div class="skills-level-right" style="width: 30%;"></div>
+                    </div>
+                    <p>SKill 2</p>
+                    <div class="skills-level">
+                        <div class="skills-level-left" style="width: 50%;"></div>
+                        <div class="skills-level-right" style="width: 50%;"></div>
+                    </div>
+                    <p>SKill 3</p>
+                    <div class="skills-level">
+                        <div class="skills-level-left" style="width: 30%;"></div>
+                        <div class="skills-level-right" style="width: 70%;"></div>
+                    </div>
+                    <p>SKill 4</p>
+                    <div class="skills-level">
+                        <div class="skills-level-left" style="width: 80%;"></div>
+                        <div class="skills-level-right" style="width: 20%;"></div>
+                    </div>
+                    <p>SKill 5</p>
+                    <div class="skills-level">
+                        <div class="skills-level-left" style="width: 60%;"></div>
+                        <div class="skills-level-right" style="width: 40%;"></div>
+                    </div>
+
+                </div>
+                <div class="skills-info">
+                    <h3>INTERESTS</h3>
+                    <p>PHOTOGRAPHY</p>
+                    <hr>
+                    <p>PANTING</p>
+                    <hr>
+                    <p>BASEKETBALL</p>
+                </div>
+            </div>
+
+            <div class="follow">
+                <span>
+                    <p>FOLLOW ME @YOURUSER</p>
+                </span><span style="padding-left: 50px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="#AA9A6F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-twitter">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                        </path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="#AA9A6F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-facebook">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="#AA9A6F" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-instagram">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+            </div>
+        </div>
+        <div class="right">
+
+            <div class="rec3"></div>
+            <div class="top">
+                <div class="profile">
+                    <span style="font-size: 40px;padding: 0 50px 0 10px;">GEORGE <span
+                            style="font-weight: bold;">SMITH</span>
+                    </span>
+
+                </div>
+                <div class="intro">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in sint, doloribus possimus debitis
+                    libero alias vel pariatur! Quis ex quaerat voluptatem maiores aliquid temporibus doloremque,
+                    incidunt
+                    non sed cupiditate?
+                </div>
+                <div class="rec">
+
+                </div>
+                <div class="rec1"></div>
+
+            </div>
+            <div class="rec2"></div>
+            <div class="experience">
+                <div class="title">
+                    <p>WORK EXPERIENCE</p>
+                </div>
+
+
+                <div class="item">
+                    <h4>MY LAST JOB</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>JOB NAME</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>JOB NAME</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>MY FIRST JOB</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education">
+                <div class="title">
+                    <p>EDUCATION</p>
+                </div>
+
+
+                <div class="item">
+                    <h4>UNIVERSITE NAME</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h4>MASTER NAME</h4>
+
+                    <div class="item">
+                        <div class="time">
+                            01/01/2020
+                            <span style="font-weight: bold;padding-left: 12px;">Front End Developer</span>
+                        </div>
+
+                        <div class="des" style="padding-left: 93px;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                            culpa veritatis dolorem natus aspernatur ratione architecto
+                            facilis laboriosam, nisi qui suscipit totam reprehenderit pariatur
+                            cumque, ut itaque debitis dolores sapiente!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+</body>
+
+</html>

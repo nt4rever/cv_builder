@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "icon": "img/auto.svg",
+        "label": "Automatic formatting",
+        "content": "Enter the contents of your resume and our smart templates will automatically format it for you. No more fiddling with margins and page breaks."
+    },
+    {
+        "id": 2,
+        "icon": "img/change.svg",
+        "label": "Easily change templates",
+        "content": "Have you ever tried changing templates in Word? It's not easy. Standard Resume lets you try new templates in one click."
+    },
+    {
+        "id": 3,
+        "icon": "img/practices.svg",
+        "label": "Built in best practices",
+        "content": "We work with recruiters and hiring managers to help you build a resume that follows the resume rules they are looking for."
+    }
+]

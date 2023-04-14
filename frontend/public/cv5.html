@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400&display=swap"
+		rel="stylesheet">
+	<title>Document</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.wrapper {
+			display: flex;
+			gap: 10px;
+			border: 1px solid #ccc;
+		}
+
+		.col_avatar {
+			background: #ccc;
+		}
+
+		.pd {
+			padding: 30px;
+		}
+
+		.text-orange {
+			color: #db5226;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+
+		.fz-12 {
+			font-size: 12px;
+		}
+
+		.line {
+			height: 15px;
+			background: #db5226;
+		}
+
+		.avatar img {
+			margin-bottom: 0;
+			height: 350px;
+			width: 100%;
+		}
+
+		.avt {
+			height: 350px;
+		}
+
+		.text-typo {
+			font-weight: bold;
+			font-size: 24px;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+
+		.mb {
+			margin-bottom: 30px;
+		}
+
+		.mb-50 {
+			margin-bottom: 50px;
+		}
+
+		.contact_list {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.contact_item p,
+		.refer_item p {
+			font-weight: bold;
+			margin-bottom: 4px;
+		}
+
+		.fz-13 {
+			font-size: 13px;
+		}
+
+		.lh {
+			line-height: 2;
+		}
+
+		.name-typo {
+			font-size: 30px;
+			letter-spacing: 3px;
+			font-weight: 500;
+			position: relative;
+		}
+
+		.bold {
+			font-size: 34px;
+			font-weight: bold;
+		}
+
+		.name::after {
+			content: '';
+			position: absolute;
+			background-color: #db5226;
+			height: 2px;
+			width: 40px;
+			top: 18%;
+		}
+
+		.pos-typo {
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		.edu_flex {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.edu-text {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+			margin-bottom: 16px;
+		}
+
+		.mb-8 {
+			margin-bottom: 8px;
+		}
+
+		.text-bold {
+			font-weight: bold;
+		}
+
+		.company_name {
+			display: flex;
+			gap: 10px;
+			align-items: baseline;
+		}
+
+		.bg_exper {
+			background: #db5226;
+			padding: 3px 10px;
+			border-radius: 5px;
+			color: #fff;
+		}
+
+		.hobbies_list {
+			display: flex;
+			gap: 20px;
+		}
+
+		.hobby_item {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.icon_hobby {
+			height: 40px;
+			width: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			border: 2px solid #db5226;
+			color: #db5226;
+		}
+
+		.expertise_list {
+			display: flex;
+			gap: 50px;
+		}
+
+
+		.expertise_box {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: #fff;
+		}
+
+		.percent svg {
+			position: relative;
+			width: 120px;
+			height: 120px;
+		}
+
+		.percent svg circle {
+			fill: none;
+			width: 120px;
+			height: 120px;
+			stroke-width: 10;
+			stroke: #000;
+			transform: translate(5px, 5px);
+			stroke-dashoffset: 330;
+			stroke-dasharray: 330;
+			border-radius: 10px;
+		}
+
+		.percent svg circle:nth-child(1) {
+			stroke-dashoffset: 0;
+			stroke: #ccc;
+		}
+
+		.percent svg circle:nth-child(2) {
+			stroke-dashoffset: calc(330 - (330 * 85) / 100);
+			stroke: #db5226;
+			border-radius: 10px;
+		}
+
+		.skills {
+			position: absolute;
+			top: 35%;
+		}
+
+		.block {
+			display: block;
+			margin-bottom: 6px;
+		}
+	</style>
+</head>
+
+<body>
+
+</body>
+<div class="wrapper">
+	<div class="col_avatar">
+		<div class="address pd">
+			<p class="text-orange">Address</p>
+			<p class="fz-12">02 Nguyen Thi Bay, Da Nang</p>
+		</div>
+
+		<div class="avatar">
+			<div class="line"></div>
+			<div class="avt"><img src="https://static.topcv.vn/cv-builder/avatar/default-avatar.webp" alt=""></div>
+			<div class="line"></div>
+		</div>
+
+		<div class="contact pd">
+			<p class="text-typo">contact</p>
+			<div class="contact_list">
+				<div class="contact_item">
+					<p>Phone</p>
+					<span class="fz-13">0832845357</span>
+				</div>
+				<div class="contact_item">
+					<p>Email</p>
+					<span class="fz-13">napa@gmail.com</span>
+				</div>
+				<div class="contact_item">
+					<p>Website</p>
+					<span class="fz-13">napa-holdings.com</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="reference pd">
+			<p class="text-typo">reference</p>
+			<div class="refer_item">
+				<p>Sara Taylore</p>
+				<span class="fz-13 block">Director | Company Name</span>
+				<span class="fz-13 block">T: +123456789</span>
+			</div>
+		</div>
+
+		<div class="hobbies pd">
+			<p class="text-typo">hobbies</p>
+			<div class="hobbies_list">
+				<div class="hobby_item fz-13">
+					<span class="icon_hobby">
+
+						<i class="fa-solid fa-plane"></i>
+					</span>
+					<span>Travel</span>
+				</div>
+				<div class="hobby_item fz-13">
+					<span class="icon_hobby">
+
+						<i class="fa-solid fa-music"></i>
+					</span>
+					<span>Music</span>
+				</div>
+				<div class="hobby_item fz-13">
+					<span class="icon_hobby">
+
+						<i class="fa-solid fa-pen"></i>
+					</span>
+					<span>Writing</span>
+				</div>
+				<div class="hobby_item fz-13">
+					<span class="icon_hobby">
+
+						<i class="fa-solid fa-chess-knight"></i>
+					</span>
+					<span>Chess</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col_about pd">
+		<div class="name mb">
+			<p class="name-typo">
+				JHON <br />
+				<span class="bold">ABIRAR</span>
+			</p>
+
+		</div>
+		<div class="position mb-50">
+			<p class="pos-typo">ui designer</p>
+		</div>
+		<div class="about mb">
+			<p class="text-typo">about me</p>
+			<p class="fz-13 lh">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est laborum tempora numquam sapiente autem,
+				mollitia magni ab temporibus, aut tenetur ratione ut iusto eligendi perspiciatis vel consequatur
+				deserunt tempore possimus.
+			</p>
+		</div>
+		<div class="education mb">
+			<p class="text-typo">education</p>
+			<div class="edu_flex">
+				<div class="edu_item">
+					<p class="edu-text">enter your major</p>
+					<p class="fz-13 mb-8">Name Of Your University</p>
+					<p class="fz-13">2005 - 2009</p>
+				</div>
+				<div class="edu_item">
+					<p class="edu-text">enter your major</p>
+					<p class="fz-13 mb-8">Name Of Your University</p>
+					<p class="fz-13">2005 - 2009</p>
+				</div>
+			</div>
+		</div>
+		<div class="experience mb">
+			<p class="text-typo">experience</p>
+			<div class="exper_list">
+				<div class="exper_item mb">
+					<p class="text-exper text-bold mb-8">Enter Job Position Here</p>
+					<div class="company_name text-bold fz-13">
+						<div class="bg_exper mb-8">2019 - 2020</div>
+						<p>Company Name / Location</p>
+					</div>
+					<p class="fz-13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum adipisci
+						dolore veritatis
+						perferendis sint minima, magni quaerat quod eos dolor aliquid tenetur laboriosam, nihil rem
+						repellendus alias? Obcaecati, reprehenderit.</p>
+				</div>
+				<div class="exper_item">
+					<p class="text-exper text-bold mb-8">Enter Job Position Here</p>
+					<div class="company_name text-bold fz-13">
+						<div class="bg_exper mb-8">Present</div>
+						<p>Company Name / Location</p>
+					</div>
+					<p class="fz-13">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laborum adipisci
+						dolore veritatis
+						perferendis sint minima, magni quaerat quod eos dolor aliquid tenetur laboriosam, nihil rem
+						repellendus alias? Obcaecati, reprehenderit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="expertise">
+			<p class="text-typo">expertise</p>
+			<div class="expertise_list">
+				<div class="expertise_box">
+					<div class="percent">
+						<svg>
+							<circle cx="50" cy="50" r="50"></circle>
+							<circle cx="50" cy="50" r="50"></circle>
+						</svg>
+					</div>
+					<div class="skills">
+						<p class="fz-12">Adobe <br /> Photoshop</p>
+					</div>
+				</div>
+				<div class="expertise_box">
+					<div class="percent">
+						<svg>
+							<circle cx="50" cy="50" r="50"></circle>
+							<circle cx="50" cy="50" r="50"></circle>
+						</svg>
+					</div>
+					<div class="skills">
+						<p class="fz-12">Adobe <br /> Photoshop</p>
+					</div>
+				</div>
+				<div class="expertise_box">
+					<div class="percent">
+						<svg>
+							<circle cx="50" cy="50" r="50"></circle>
+							<circle cx="50" cy="50" r="50"></circle>
+						</svg>
+					</div>
+					<div class="skills">
+						<p class="fz-12">Adobe <br /> Photoshop</p>
+					</div>
+				</div>
+				<div class="expertise_box">
+					<div class="percent">
+						<svg>
+							<circle cx="50" cy="50" r="50"></circle>
+							<circle cx="50" cy="50" r="50"></circle>
+						</svg>
+					</div>
+					<div class="skills">
+						<p class="fz-12">Adobe <br /> Photoshop</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</html>

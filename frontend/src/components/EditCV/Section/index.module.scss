@@ -1,0 +1,57 @@
+@import '@/assets/styles/scss/global/_mixins.scss';
+
+.root {
+    font-family: 'Inter', sans-serif;
+}
+
+.headingContainer {
+    display: flex;
+
+    .headingInput {
+        flex-grow: 1;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        background: transparent;
+        border: none !important;
+        padding: 5px;
+        color: #000;
+
+        &:focus {
+            border-radius: 0 !important;
+            outline: none;
+        }
+
+        &.editable {
+            background: #d9d9d9;
+        }
+    }
+
+    .headingAction {
+        width: 100px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 15px;
+        visibility: hidden;
+
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: block !important;
+        }
+    }
+
+    &:hover,
+    &:active {
+        .headingAction {
+            visibility: visible;
+        }
+    }
+}
+
+.container {
+    margin: 19px 0;
+    margin-bottom: 50px;
+}

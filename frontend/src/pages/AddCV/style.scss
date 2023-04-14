@@ -1,0 +1,7 @@
+@use '@/assets/styles/scss/global/global.scss' as *;
+input:focus {
+    @include common-border-focus;
+}
+textarea:focus {
+    @include common-border-focus;
+}

@@ -1,0 +1,166 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String            @id @default(auto()) @map("_id") @db.ObjectId
+  email            String            @unique
+  password         String?
+  firstName        String
+  lastName         String
+  facebookProvider FacebookProvider?
+  googleProvider   GoogleProvider?
+  isActive         Boolean           @default(true)
+  refreshToken     String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+}
+
+type FacebookProvider {
+  id    String
+  token String
+}
+
+type GoogleProvider {
+  id    String
+  token String
+}
+
+model Template {
+  id          String           @id @default(auto()) @map("_id") @db.ObjectId
+  category    CategoryTemplate @default(Creative)
+  name        String
+  description String?
+  urlImage    String
+  theme       Theme
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  CVStorage   CVStorage[]
+}
+
+enum CategoryTemplate {
+  Creative
+  Modern
+  Professional
+  Simple
+}
+
+model CVInformation {
+  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String
+  about     About
+  work      Work[]
+  education Education[]
+  contact   Contact
+}
+
+type About {
+  firstName String?
+  lastName  String?
+  title     String?
+  summary   String?
+}
+
+type Contact {
+  city  String?
+  state String?
+  email String?
+  phone String?
+}
+
+model Work {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  company         String
+  jobTitle        String
+  companyWebsite  String?
+  start           DateTime?
+  stop            DateTime?
+  description     String?
+  CVInformation   CVInformation @relation(fields: [cVInformationId], references: [id])
+  cVInformationId String        @db.ObjectId
+}
+
+model Education {
+  id              String        @id @default(auto()) @map("_id") @db.ObjectId
+  school          String
+  degree          String
+  schoolWebsite   String?
+  start           DateTime?
+  stop            DateTime?
+  description     String?
+  CVInformation   CVInformation @relation(fields: [cVInformationId], references: [id])
+  cVInformationId String        @db.ObjectId
+}
+
+model CVStorage {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  templateId String?   @db.ObjectId
+  template   Template? @relation(fields: [templateId], references: [id], onUpdate: Cascade, onDelete: SetNull)
+  userId     String
+  about      About
+  contact    Contact
+  sections   Section[]
+  theme      Theme
+  avatar     String?
+  urlImage   String?
+  isPublic   Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+type Theme {
+  primaryText        String @default("#000000")
+  sectionTitle       String @default("#ffffff")
+  monogramBackground String @default("#fbbc05")
+  monogramText       String @default("#ffffff")
+  background         String @default("#000000")
+}
+
+model Section {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  heading     String
+  type        SectionType
+  order       Int         @default(0)
+  details     Detail[]
+  standards   Standard[]
+  tags        String[]
+  CVStorage   CVStorage   @relation(fields: [cVStorageId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  cVStorageId String      @db.ObjectId
+}
+
+model Detail {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String?
+  subTitle  String?
+  order     Int     @default(0)
+  Section   Section @relation(fields: [sectionId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sectionId String  @db.ObjectId
+}
+
+model Standard {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name        String?
+  title       String?
+  website     String?
+  start       DateTime?
+  stop        DateTime?
+  current     Boolean?  @default(false)
+  description String?
+  order       Int       @default(0)
+  Section     Section   @relation(fields: [sectionId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  sectionId   String    @db.ObjectId
+}
+
+enum SectionType {
+  DETAIL
+  STANDARD
+  TAG
+}

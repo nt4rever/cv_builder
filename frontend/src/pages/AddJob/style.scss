@@ -1,0 +1,93 @@
+@use '@/assets/styles/scss/global/global.scss' as *;
+.add-job {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 179px 275px 0;
+    overflow: hidden;
+    &__head {
+        text-align: center;
+        margin-bottom: 48px;
+        &--img {
+            margin-bottom: 11px;
+        }
+        &--title {
+            @include main-title;
+            max-width: 350px;
+            margin-bottom: 8px;
+        }
+        &--content {
+            color: $txt-third-color;
+            line-height: 21px;
+        }
+    }
+    &__main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        &--left {
+            margin-right: 24px;
+        }
+        &--left,
+        &--right {
+            display: flex;
+            flex-direction: column;
+            input {
+                @include txt-type-field;
+                @include padding-job-edu;
+                margin-right: 0 !important;
+                margin-bottom: 24px;
+            }
+        }
+        .main-left__label,
+        .main-right__label {
+            @include title-field;
+        }
+    }
+    &__btn-submit {
+        @include padding-btn-add;
+        margin-bottom: 48px;
+        padding: 14px 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 654px) and (min-width: 320px) {
+    .add-job {
+        display: block;
+        width: 100%;
+        padding: 0 24px;
+        margin: 152px 0 0;
+        &__main {
+            display: block;
+            .add-job__main--left {
+                margin: 0;
+            }
+            &--left,
+            &--right {
+                input {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .add-job__head {
+            width: 100%;
+            &--title {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            &--content {
+                color: $txt-third-color;
+                line-height: 21px;
+            }
+        }
+        .add-job__btn-next {
+            @include flex(center, center);
+        }
+        .add-job__btn-submit {
+            padding: 17px 0;
+            width: 100%;
+        }
+    }
+}

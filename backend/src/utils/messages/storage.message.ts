@@ -1,0 +1,18 @@
+export const CV_STORAGE_MESSAGES = {
+  ERROR: 'Error when handle your request',
+  CREATE_SUCCESS: 'Create CV Success',
+  SECTION_NOT_FOUND: 'Section not found',
+  SECTION_UPDATED: 'Section heading has been updated',
+  SECTION_DELETED: 'Section has been deleted',
+  SECTION_CREATED: 'Section has been created successfully',
+  SECTION_CONTENT_CREATED: 'Section content has been created successfully',
+  SECTION_CONTENT_UPDATED: 'Section content has been updated successfully',
+  SECTION_CONTENT_DELETED: 'Section content has been deleted successfully',
+  SECTION_SORT_SUCCESS: 'Sort section successfully',
+  SECTION_CONTENT_SORT_SUCCESS: 'Sort content section successfully',
+  CV_STORAGE_DELETED: 'CV has been deleted',
+  CV_STORAGE_NOT_FOUND: 'CV not found',
+  CV_STORAGE_UPDATED: 'CV has been updated',
+  UPLOAD_SUCCESS: 'Avatar upload successfully',
+  CHANGE_TEMPLATE_SUCCESS: 'Change template successfully',
+};

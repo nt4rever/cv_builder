@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                color: #878787;
+            }
+
+            .wrapper {
+                width: 100%;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1440px;
+                margin: 0 auto;
+                padding: 65px 58px;
+                position: relative;
+            }
+
+            .container .background {
+                position: absolute;
+                z-index: -1;
+                left: 12px;
+                top: 12px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .container .background span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 220px;
+                line-height: 198px;
+                color: #fdf0ef;
+            }
+
+            .header {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                margin-bottom: 60px;
+            }
+
+            .header__left {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .header__left .title {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                gap: 8px;
+            }
+
+            .header__left .title p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 49px;
+                min-width: 73px;
+                color: #e36d60;
+            }
+
+            .header__left .desc {
+                position: relative;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 31px;
+                padding-left: 68px;
+                color: #e36d60;
+            }
+
+            .header__left .desc:before {
+                position: absolute;
+                margin-top: auto;
+                margin-bottom: auto;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                text-align: center;
+                content: '';
+                width: 60px;
+                height: 3px;
+                background-color: #e36d60;
+            }
+
+            .header__right {
+                max-width: 380px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 27px;
+                color: #e36d60;
+            }
+
+            .content {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .content__side {
+                width: 30%;
+            }
+
+            .content__main {
+                width: 70%;
+            }
+
+            .contact > div,
+            .skills > div {
+                position: relative;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                padding-left: 28px;
+                color: #e36d60;
+                margin-bottom: 23px;
+                margin-top: 55px;
+            }
+
+            .contact > div:before,
+            .skills > div:before {
+                position: absolute;
+                margin-top: auto;
+                margin-bottom: auto;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                text-align: center;
+                content: '';
+                width: 20px;
+                height: 3px;
+                background-color: #e36d60;
+            }
+
+            .contact bold,
+            .skills bold {
+                display: block;
+                font-weight: 600;
+                margin-top: 11px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .contact ul,
+            .skills ul {
+                list-style: none;
+            }
+
+            .contact ul li,
+            .skills ul li {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .contact > div {
+                margin-top: 0;
+            }
+
+            .work > div,
+            .education > div {
+                position: relative;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 22px;
+                padding-left: 68px;
+                color: #e36d60;
+                margin-bottom: 15px;
+            }
+
+            .work > div:before,
+            .education > div:before {
+                position: absolute;
+                margin-top: auto;
+                margin-bottom: auto;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                text-align: center;
+                content: '';
+                width: 60px;
+                height: 3px;
+                background-color: #e36d60;
+            }
+
+            .work > ul,
+            .education > ul {
+                list-style: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                gap: 43px;
+            }
+
+            .work > ul > li,
+            .education > ul > li {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .work > ul > li > span,
+            .education > ul > li > span {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 43px;
+                color: #e36d60;
+                margin-bottom: 8px;
+            }
+
+            .work > ul > li > div,
+            .education > ul > li > div {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                margin-bottom: 3px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+            }
+
+            .work > ul > li ul,
+            .education > ul > li ul {
+                list-style: disc;
+                padding-left: 16px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .work > ul > li ul li,
+            .education > ul > li ul li {
+                padding-left: 12px;
+            }
+
+            .education > div {
+                margin-top: 43px;
+            }
+
+            @media (max-width: 768px) and (min-width: 320px) {
+                .content__main {
+                    width: 100%;
+                }
+                .content__side {
+                    width: 100%;
+                }
+                .header {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    gap: 50px;
+                }
+                .content {
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: reverse;
+                    -ms-flex-direction: column-reverse;
+                    flex-direction: column-reverse;
+                }
+                .container {
+                    width: 100%;
+                    max-width: 1440px;
+                    margin: 0 auto;
+                    padding: 38px 24px;
+                    position: relative;
+                }
+                .container .background {
+                    left: -16px;
+                    top: -12px;
+                }
+                .work > ul,
+                .education > ul {
+                    gap: 41px;
+                }
+                .work > ul > li > div,
+                .education > ul > li > div {
+                    margin-bottom: 5px;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+                .work > ul > li > div span,
+                .education > ul > li > div span {
+                    display: none;
+                }
+                .education > div {
+                    margin-top: 41px;
+                }
+                .contact > div {
+                    margin-top: 43px;
+                }
+            }
+            /*# sourceMappingURL=style.css.map */
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="background">
+                    <span>L</span>
+                    <span>R</span>
+                </div>
+                <header class="header">
+                    <div class="header__left">
+                        <div class="title">
+                            <p>Luis</p>
+                            <p>Romeo</p>
+                        </div>
+                        <div class="desc">Digital Marketer</div>
+                    </div>
+                    <p class="header__right">
+                        Digital marketing specialist with six years of experience working as a teacher, consultant, and
+                        employee. Familiar with most major digital marketing techniques and platforms.
+                    </p>
+                </header>
+                <div class="content">
+                    <div class="content__side">
+                        <section class="contact">
+                            <div>Contact info</div>
+                            <ul>
+                                <li>Seattle, WA</li>
+                                <li>linkedin.com/in/luis</li>
+                                <li>luis@email.com</li>
+                                <li>555-555-5555</li>
+                            </ul>
+                        </section>
+                        <section class="skills">
+                            <div>Skills</div>
+                            <bold>General</bold>
+                            <ul>
+                                <li>Content marketing</li>
+                                <li>Email marketing</li>
+                                <li>Social media</li>
+                                <li>SEO</li>
+                            </ul>
+                            <bold>Advertising</bold>
+                            <ul>
+                                <li>Google Ads</li>
+                                <li>Facebook Ads</li>
+                                <li>LinkedIn Ads</li>
+                            </ul>
+                            <bold>Analytics</bold>
+                            <ul>
+                                <li>Google Analytics</li>
+                                <li>Segment</li>
+                                <li>Ahrefs</li>
+                            </ul>
+                            <bold>Optimization</bold>
+                            <ul>
+                                <li>Google Optimize</li>
+                                <li>A/B testing</li>
+                                <li>Optimizely</li>
+                                <li>Hotjar</li>
+                                <li>CRO</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="content__main">
+                        <section class="work">
+                            <div>Work experience</div>
+                            <ul>
+                                <li>
+                                    <span>Demand Curve</span>
+                                    <div>
+                                        <p>Growth Marketing Instructor &nbsp;</p>
+                                        <span>| &nbsp; </span>
+                                        <p>Mar 2018 | Current</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Review students marketing projects and suggest changes and improvements.
+                                        </li>
+                                        <li>
+                                            Topics include paid advertising, content marketing, landing page
+                                            copy/design/optimization, and more.
+                                        </li>
+                                        <li>Helped startup founders increase growth by as much as 10x.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Freelance</span>
+                                    <div>
+                                        <p>Growth Marketing Instructor &nbsp;</p>
+                                        <span>| &nbsp; </span>
+                                        <p>Mar 2018 | Current</p>
+                                    </div>
+                                    <ul>
+                                        <li>Growth marketing consulting, with a focus on customer acquisition</li>
+                                        <li>
+                                            Projects covered landing page optimization, paid advertising, content
+                                            marketing, and search engine optimization.
+                                        </li>
+                                        <li>Clients included Google, Microsoft, Casper, Away, and Stripe.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Google</span>
+                                    <div>
+                                        <p>Growth Marketing Instructor &nbsp;</p>
+                                        <span>| &nbsp; </span>
+                                        <p>Mar 2018 | Current</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Helped existing Google Ads customers increase spend efficiency by up to
+                                            200%.
+                                        </li>
+                                        <li>Signed new clients totaling over three million dollars in yearly spend.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Apple</span>
+                                    <div>
+                                        <p>Growth Marketing Instructor &nbsp;</p>
+                                        <span>| &nbsp; </span>
+                                        <p>Mar 2018 | Current</p>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            Worked with a team of three on optimizing landing pages for product releases
+                                            including the 5k iMac and Apple Pay.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="education">
+                            <div>Education</div>
+                            <ul>
+                                <li>
+                                    <span>NYU Stern</span>
+                                    <div>
+                                        <p>Growth Marketing Instructor &nbsp;</p>
+                                        <span>| &nbsp; </span>
+                                        <p>Mar 2018 | Current</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

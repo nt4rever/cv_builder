@@ -1,0 +1,23 @@
+.slate {
+    li {
+        list-style: initial !important;
+    }
+    a {
+        text-decoration: underline !important;
+        color: #551a8b !important;
+    }
+
+    .link {
+        color: #551a8b !important;
+    }
+}
+
+.btn--active {
+    img {
+        opacity: 0.5 !important;
+    }
+}
+
+.edit-cv__right .bullet-point__icon {
+    padding-bottom: 0 !important;
+}

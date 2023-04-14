@@ -1,0 +1,224 @@
+@use '@/assets/styles/scss/global/global.scss' as *;
+.dashboard__main--layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.dashboard-items {
+    margin-left: 20px;
+}
+.dashboard {
+    margin: 74px 41px 100px 42px;
+    text-align: left;
+    &__title {
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        color: #1e2532;
+        margin-bottom: 48px;
+    }
+    &__main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 32px 40px 0 40px;
+        line-height: 20px;
+        text-transform: capitalize;
+        letter-spacing: 1.8px;
+        font-weight: 400;
+        .main-left__img,
+        .main-right__img {
+            width: 100%;
+            border: 1px solid #e4ebf1;
+            border-radius: 4px;
+            margin-right: 20px;
+            img {
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 4px;
+            }
+        }
+        .main-right__img:hover {
+            border: 1px solid $btn-main-bg;
+            .img__btn-add {
+                background-color: $btn-main-bg;
+            }
+        }
+        &--left {
+            margin-bottom: 32px;
+            .main-left__items {
+                &--title {
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                }
+                &--status {
+                    margin-bottom: 15px;
+                    font-size: 13px;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+                &--list {
+                    ul {
+                        li {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                            img {
+                                margin-right: 14px;
+                            }
+                            div {
+                                cursor: pointer;
+                                font-size: 15px;
+                                color: rgba(0, 0, 0, 0.7);
+                            }
+                            span:hover {
+                                color: #2f58cd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--right {
+            padding-bottom: 32px;
+            .main-right__img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img__btn-add {
+                    cursor: pointer;
+                    background: #e4ebf1;
+                    padding: 19px;
+                    border-radius: 50%;
+                    width: 57px;
+                    height: 57px;
+                    img {
+                        width: 19px;
+                        height: 19px;
+                    }
+                }
+            }
+            .main-right__items {
+                font-size: 13px;
+                &--title {
+                    margin-top: 17px;
+                }
+                &--content {
+                    color: rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+    }
+}
+.MuiPaper-root {
+    margin: -32px !important;
+}
+.MuiDialogContentText-root {
+    text-align: center;
+    .MuiTypography-body1 {
+        font-family: 'Inter' !important;
+        font-size: 16px !important;
+        line-height: 22px !important;
+        color: rgba(0, 0, 0, 0.6) !important;
+    }
+}
+.MuiDialogActions-root {
+    margin-top: 22px;
+}
+@media screen and (max-width: 1199px) {
+    .dashboard {
+        &__main {
+            .main-left__img,
+            .main-right__img {
+                height: 100%;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .dashboard {
+        &__main {
+            display: block;
+            &--right {
+                margin-top: 10px;
+            }
+            .main-left__img,
+            .main-right__img {
+                height: auto;
+            }
+            .main-right__img {
+                height: 300px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .dashboard {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 599px) {
+    .MuiPaper-root {
+        width: 100% !important;
+        margin: 0 16px !important;
+        .MuiDialogContent-root {
+            margin: 0;
+            padding: 0;
+            .MuiDialogContentText-root {
+                margin: 0 !important;
+            }
+        }
+        .MuiDialogActions-root {
+            margin: 0 auto;
+            .MuiButtonBase-root:nth-child(2) {
+                margin-right: 0;
+            }
+        }
+    }
+    .dashboard {
+        &__main {
+            padding: 0;
+            &--layout {
+                display: block;
+            }
+            .main-left__img,
+            .main-right__img {
+                width: 100%;
+                img {
+                    object-fit: contain;
+                }
+            }
+            .main-right__items {
+                margin-bottom: 74px;
+                &--content {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .dashboard {
+        &__main {
+            .main-left__img,
+            .main-right__img {
+                max-height: 235px;
+                height: 100%;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

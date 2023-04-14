@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300;1,400;1,500&display=swap"
+		rel="stylesheet">
+	<title>Document</title>
+	<style>
+		.wrapper {
+			display: flex;
+			gap: 10px;
+			border: 1px solid #ccc;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.column_left {
+			flex-basis: 20%;
+		}
+
+		p {
+			font-size: 14px;
+		}
+
+		.text-center {
+			text-align: center;
+			color: #fff;
+			margin: 0;
+		}
+
+		.name {
+			font-size: 24px;
+			text-transform: uppercase;
+
+		}
+
+		.position {
+			padding: 10px 0;
+		}
+
+		.column_main {
+			flex-basis: 80%;
+		}
+
+		.user {
+			background: #0c7094;
+		}
+
+		.user_avatar {
+			padding: 10px;
+			width: 100%;
+		}
+
+		.user_avatar img {
+			border-radius: 50%;
+			width: 250px;
+			height: 250px;
+		}
+
+		.user_main {
+			background: #074358;
+			color: #fff;
+			padding: 10px;
+		}
+
+		.user_info {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			font-size: 14px;
+		}
+
+		.icon-info {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.icon-info i {
+			font-size: 11px;
+			text-align: center;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			padding-top: 4px;
+			margin-right: 12px;
+		}
+
+		.icon-info span {
+			padding: 5px;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #0c7094;
+		}
+
+		.job-target {
+			line-height: 1.5;
+		}
+
+		.skill_rate {
+			background-color: #cecece;
+			height: 12px;
+			align-items: flex-end;
+			display: flex;
+			cursor: pointer;
+		}
+
+		.skill_rate--item {
+			width: 20%;
+			height: 100%;
+		}
+
+		.active {
+			background-color: rgb(12 112 148 / 100%);
+		}
+
+		.education,
+		.experience,
+		.prize,
+		.certificate,
+		.activity {
+			padding: 14px 20px 14px 0;
+		}
+
+		.sub {
+			margin-bottom: 16px;
+		}
+
+		.sub span {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #0c7094;
+			display: inline-block;
+		}
+
+		.sub i {
+			font-size: 20px;
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			padding-top: 4px;
+			margin-right: 12px;
+			color: #fff;
+		}
+
+		.title {
+			font-size: 21px;
+			margin-left: 5px;
+			font-weight: 600;
+		}
+
+		.edu_school {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.edu_school p {
+			margin-bottom: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="column_left">
+			<div class="user">
+				<div class="user_avatar">
+					<img src="https://static.topcv.vn/cv-builder/avatar/default-avatar.webp" alt="">
+				</div>
+				<div class="user_name">
+					<p class="text-center name">
+						<strong>Nguyễn Văn A</strong>
+					</p>
+					<p class="text-center position">
+						<em>Kỹ sư phần mềm</em>
+					</p>
+				</div>
+			</div>
+			<div class="user_main">
+				<div class="user_info">
+					<div class="icon-info">
+						<span>
+							<i class="fa-solid fa-phone"></i>
+						</span>
+						0832845357
+					</div>
+					<div class="icon-info">
+						<span><i class="fa-solid fa-envelope"></i> </span>toan.le@napaglobal.com
+					</div>
+					<div class="icon-info">
+						<span><i class="fa-solid fa-info"></i></span> https://napaglobal.com
+					</div>
+					<div class="icon-info">
+						<span><i class="fa-solid fa-location-dot"></i> </span>Da Nang
+					</div>
+				</div>
+				<div class="user_target">
+					<h3>Mục tiêu nghề nghiệp</h3>
+					<p class="job-target">
+						Kỹ sư phần mềm với hơn 2 năm kinh nghiệm trong lĩnh vực phát triển phần mềm và ứng dụng thương
+						mại. Mong muốn tham gia công ty [X] để xây dựng các giải pháp kinh doanh tiên tiến và sáng tạo
+						cho nhóm khách hàng ấn tượng trong phạm vi toàn cầu của mình. Trong các vai trò trước đây, đã
+						giảm 25% thời gian chết và đảm bảo 98% thời gian hoàn thành dự án đúng thời hạn. Đồng thời xác
+						định và xử lý một nút thắt quy trình quan trọng giúp tăng hiệu quả mã hóa lên 35% khi được giải
+						quyết.
+					</p>
+				</div>
+				<div class="user_skills">
+					<h3>Các kỹ năng</h3>
+					<div class="skill-item">
+						<p>Nghiên cứu và đề xuất các công nghệ mới</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Phân tích requirement, thiết kế hệ thống</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Lập trình UI/UX dựa trên ES6, ReactJS, Redux.</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Tư vấn về API backend.</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Tối ưu sourcecode, performance.</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Am hiểu về nguyên tắc lập và mã hóa code: Clean code, SOLID</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<p>Thiết kế responsive web design, làm việc với RESTful APIs.</p>
+						<div class="skill_rate">
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+							<div class="skill_rate--item active"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column_main">
+			<div class="education">
+				<div class="sub">
+					<span>
+						<i class="fa-solid fa-lightbulb"></i>
+					</span>
+					<strong class="title">Học vấn</strong>
+				</div>
+				<div class="edu_flex">
+					<div class="edu_school">
+						<p><strong>UDEMY</strong></p>
+						<p><strong>2021 - 2022</strong></p>
+					</div>
+					<p>Khoá học Kỹ năng thiết kế website</p>
+					<div class="edu_school">
+						<p><strong>UDEMY</strong></p>
+						<p><strong>2021 - 2022</strong></p>
+					</div>
+					<p>Khoá học Kỹ năng thiết kế website</p>
+				</div>
+			</div>
+			<div class="experience">
+				<div class="sub">
+					<span>
+						<i class="fa-solid fa-people-group"></i>
+					</span>
+					<strong class="title">Kinh nghiệm làm việc</strong>
+				</div>
+				<div class="edu_flex">
+					<div class="edu_school">
+						<p><strong>CÔNG TY ABC</strong></p>
+						<p><strong>08/2020 - 08/2022</strong></p>
+					</div>
+					<p>Kỹ sư phần mềm</p>
+					<ul class="job-desc">
+						<li>
+							<p>Tư vấn giải pháp cho 100 khách hàng, trao đổi, giải đáp thắc mắc. Phân tích nhu cầu của
+								khách hàng, phân tích ứng dụng của doanh nghiệp. Review hạ tầng khách hàng. </p>
+						</li>
+						<li>
+							<p>Xây dựng và Review Proposal, Quotation</p>
+						</li>
+						<li>
+							<p>Xây dựng kế hoạch triển khai, kế hoạch migrate, timeline</p>
+						</li>
+						<li>
+							<p>Hỗ trợ khách hàng xử lý sự cố trong phạm vi phòng Cloud</p>
+						</li>
+						<li>
+							<p>Tham gia hỗ trợ các hoạt động truyền thông, sự kiện của phòng Sale và Marketing</p>
+						</li>
+					</ul>
+					<div class="edu_school">
+						<p><strong>CÔNG TY BCD</strong></p>
+						<p><strong>08/2018 - 07/2020</strong></p>
+					</div>
+					<p>Thực tập sinh kỹ sư phần mềm</p>
+					<ul class="job-desc">
+						<li>
+							<p>Hỗ trợ các quy trình kiểm tra và kỹ thuật của công ty. </p>
+						</li>
+						<li>
+							<p>Đã hoàn thành bảo trì trên các chương trình hiện có.</p>
+						</li>
+						<li>
+							<p>Kiểm tra phần mềm đã hoàn thành đáp ứng các yêu cầu của khách hàng.</p>
+						</li>
+						<li>
+							<p>Thực hiện liên tục xác định, đo lường và cải tiến các quy trình.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="prize">
+				<div class="sub">
+					<span>
+						<i class="fa-sharp fa-solid fa-trophy"></i>
+					</span>
+					<strong class="title">Danh hiệu và giải thưởng</strong>
+				</div>
+				<div class="prize_item">
+					<p><strong>2021</strong> &nbsp; Nhân viên xuất sắc nhất Quý 4/2021</p>
+					<p><strong>2021</strong> &nbsp; Giải nhất Cuộc thi Thể thao X</p>
+				</div>
+			</div>
+			<div class="certificate">
+				<div class="sub">
+					<span>
+						<i class="fa-solid fa-certificate"></i>
+					</span>
+					<strong class="title">Danh hiệu và giải thưởng</strong>
+				</div>
+				<div class="prize_item">
+					<p><strong>2022</strong> &nbsp; Microsoft Certified IT Professional</p>
+					<p><strong>2021</strong> &nbsp; Chứng chỉ Security+ của CompTIA</p>
+					<p><strong>2020</strong> &nbsp; Chứng chỉ chuyên gia mạng Cisco (Cisco Certified Internetwork Expert
+						– CCIE) </p>
+				</div>
+			</div>
+			<div class="activity">
+				<div class="sub">
+					<span>
+						<i class="fa-solid fa-star"></i>
+					</span>
+					<strong class="title">Hoạt động</strong>
+				</div>
+				<div class="edu_flex">
+					<div class="edu_school">
+						<p><strong>CLB HỌC THUẬT KHOA CNTT - ĐẠI HỌC A</strong></p>
+						<p><strong>06/2016 - 09/2020</strong></p>
+					</div>
+					<p>Thành viên</p>
+					<ul>
+						<li>
+							<p>Tổ chức 3 sự kiện chia sẻ nghề nghiệp ngành IT, thu hút 300 sinh viên tham gia. </p>
+						</li>
+						<li>
+							<p>Tổ chức 2 cuộc thi lập trình thu hút 100 sinh viên tham gia.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

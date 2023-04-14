@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    color: var(--monogramText);
+    min-height: 1332px;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &__name {
+        display: flex;
+        flex-direction: column;
+        & > span {
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 0.9;
+            font-family: 'DM Serif Display', serif;
+            color: var(--primaryText);
+        }
+    }
+    & > img {
+        width: 128px;
+        height: 128px;
+        border-radius: 10cm;
+        object-fit: cover;
+    }
+}
+.about {
+    margin-bottom: 48px;
+    &__bio {
+        line-height: 1.4;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &__info {
+        line-height: 1.6;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 16px;
+        opacity: 0.7;
+    }
+    &__job {
+        line-height: 1.4;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+.standard {
+    margin-bottom: 70px;
+    & h3 {
+        color: var(--primaryText);
+        font-weight: 400;
+        line-height: 1.4;
+        font-family: 'DM Serif Display', serif;
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+    }
+    &__item {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        & a {
+            line-height: 1.6;
+            font-weight: 700;
+            color: var(--sectionTitle);
+            font-size: 16px;
+            margin-bottom: 6px;
+            margin-top: 2px;
+            display: block;
+        }
+    }
+    &__time {
+        display: flex;
+        line-height: 1.6;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 6px;
+        opacity: 0.7;
+    }
+    &__left {
+        width: 260px;
+    }
+    &__right {
+        flex: 1;
+        & p {
+            line-height: 1.6;
+            font-weight: 400;
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        & > div {
+            font-weight: 400;
+            & li {
+                line-height: 1.6;
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 4px;
+                margin-left: 16px;
+                padding-left: 0;
+                list-style: disc;
+                font-style: normal;
+            }
+        }
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+    }
+}
+.detail,
+.tag {
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    & h3 {
+        color: var(--primaryText);
+        font-weight: 400;
+        line-height: 1.4;
+        font-family: 'DM Serif Display', serif;
+        font-size: 32px;
+        width: 260px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+        row-gap: 12px;
+    }
+    & p {
+        line-height: 1.6;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 16px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        width: 33.33%;
+        & span {
+            line-height: 1.6;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--sectionTitle);
+        }
+        & ul {
+            & li {
+                line-height: 1.6;
+                font-weight: 400;
+                font-size: 16px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.tag {
+    align-items: center;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .container {
+        padding: 40px 24px;
+    }
+    .standard {
+        &__item {
+            flex-direction: column;
+        }
+    }
+    .tag,
+    .detail {
+        h3 {
+            margin-bottom: 30px;
+        }
+        flex-direction: column;
+        &__list {
+            flex-direction: column;
+            gap: 27px;
+        }
+    }
+    .tag {
+        align-items: start;
+    }
+}

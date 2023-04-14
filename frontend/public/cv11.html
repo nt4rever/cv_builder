@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: #6d7a7e;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 59px 65px;
+        }
+
+        .header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-bottom: 29px;
+        }
+
+        .header img {
+            width: 48px;
+            height: 48px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .header__info {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            gap: 48px;
+            margin-right: 48px;
+        }
+
+        .header__info > div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .header__info > div p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .owner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 39px;
+            color: #2a3235;
+            margin-bottom: 10px;
+        }
+
+        .owner p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 39px;
+            color: #2a3235;
+        }
+
+        .objective {
+            margin-bottom: 53px;
+        }
+
+        .objective p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 39px;
+            color: #6d7a7e;
+        }
+
+        .section h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #b6bbbc;
+            margin-bottom: 23px;
+        }
+
+        .section__list {
+            list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 27px;
+        }
+
+        .section__item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .section__item ul {
+            list-style: disc;
+            margin-left: 220px;
+        }
+
+        .section__item ul li {
+            margin-left: 16px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 29px;
+        }
+
+        .section__title {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .section__title > p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: #2a3235;
+        }
+
+        .section__time {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            min-width: 220px;
+            color: #b6bbbc;
+        }
+
+        .section__time p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: #b6bbbc;
+        }
+
+        .work {
+            margin-bottom: 59px;
+        }
+
+        .education {
+            margin-bottom: 69px;
+        }
+
+        .skill {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .skill h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: #b6bbbc;
+            min-width: 220px;
+        }
+
+        .skill__list {
+            list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            row-gap: 16px;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .skill__item {
+            width: 33.33%;
+        }
+
+        .skill__item > div {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 29px;
+            color: #2a3235;
+            margin-bottom: 7px;
+        }
+
+        .skill__item ul {
+            list-style: none;
+        }
+
+        .skill__item ul li {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        @media (max-width: 768px) and (min-width: 320px) {
+            .container {
+                padding: 40px 24px;
+            }
+            .header {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            .header img {
+                margin-bottom: 23px;
+            }
+            .header__info {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                gap: 0;
+            }
+            .owner {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .owner p {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .objective {
+                margin-bottom: 66px;
+            }
+            .objective p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .section {
+                margin-bottom: 66px;
+            }
+            .section h3 {
+                margin-bottom: 22px;
+            }
+            .section__title {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+                gap: 10px;
+            }
+            .section__list {
+                gap: 22px;
+            }
+            .section__item {
+                gap: 12px;
+            }
+            .section__item ul {
+                margin: 0;
+            }
+            .skill {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+            .skill h3 {
+                margin-bottom: 22px;
+            }
+            .skill__list {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                row-gap: 15px;
+            }
+            .skill__item {
+                width: 100%;
+            }
+            .skill__item > div {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <header class="header">
+                    <img
+                        src="https://scontent.fsgn14-1.fna.fbcdn.net/v/t39.30808-6/279078416_3068619873468458_6489132673043206887_n.jpg?stp=c0.131.1589.1589a_dst-jpg_s552x414&_nc_cat=111&ccb=1-7&_nc_sid=da31f3&_nc_ohc=QOW45Hz8kyoAX_R8PxR&_nc_oc=AQkaVK5Vn5q24QCWxCnno_P1Ckr4PD7iOTP7kM3yMon1FdGtbQNj-YBXm9pyiOOEbuY&_nc_ht=scontent.fsgn14-1.fna&oh=00_AfBc_KKGdKEY7dQhY7EnWxrjon_mlbdnGS44h1RPUqNdNQ&oe=6439CC8A"
+                        alt=""
+                        class="header__avatar"
+                    />
+                    <div class="header__info">
+                        <div>
+                            <p>Cupertino, CA</p>
+                            <p>maia@email.com</p>
+                        </div>
+                        <div>
+                            <p>github.com/maia</p>
+                            <p>555-555-5555</p>
+                        </div>
+                    </div>
+                </header>
+                <section class="owner">
+                    <p class="owner__name">Maia Pearce</p>
+                    ,&nbsp;
+                    <p class="owner__job">iOS Developer</p>
+                </section>
+                <section class="objective">
+                    <p>
+                        I have delivered world-class user experiences to millions of people. Well-versed with Swift,
+                        Objective-C, and most of the Apple frameworks.
+                    </p>
+                </section>
+                <section class="work section">
+                    <h3>Work Experience</h3>
+                    <ul class="section__list">
+                        <li class="section__item">
+                            <div class="section__title">
+                                <div class="section__time">
+                                    <p>Apr 2018</p>
+                                    &nbsp;-&nbsp;
+                                    <p>Current</p>
+                                </div>
+                                <p>Square, Mobile Developer, Cash App</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    Worked closely with design to prototype and implement investing charts with over a
+                                    million monthly users.
+                                </li>
+                                <li>Built boosts UI that lead to a 15% increase in Cash App retail purchases.</li>
+                            </ul>
+                        </li>
+                        <li class="section__item">
+                            <div class="section__title">
+                                <div class="section__time">
+                                    <p>2017</p>
+                                    &nbsp;-&nbsp;
+                                    <p>2018</p>
+                                </div>
+                                <p>Apple, Software Engineer, iOS</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    Deeply integrated Workflow with iOS using internal SPIs, leading to a substantial
+                                    increase in the number of possible automations.
+                                </li>
+                                <li>Wrote new integrations using Swift, resulting in a 25% performance improvement.</li>
+                            </ul>
+                        </li>
+                        <li class="section__item">
+                            <div class="section__title">
+                                <div class="section__time">
+                                    <p>2015</p>
+                                    &nbsp;-&nbsp;
+                                    <p>2017</p>
+                                </div>
+                                <p>Workflow (Acquired by Apple), iOS Engineer</p>
+                            </div>
+                            <ul>
+                                <li>Worked with Swift and objective-c to set up integrations with third party apps.</li>
+                                <li>
+                                    Used iOS and watchOS APIs to deliver a seamless experience across iPhones, iPads,
+                                    and Apple Watches.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="education section">
+                    <h3>Education</h3>
+                    <ul class="section__list">
+                        <li class="section__item">
+                            <div class="section__title">
+                                <div class="section__time">
+                                    <p>2011</p>
+                                    &nbsp;-&nbsp;
+                                    <p>2015</p>
+                                </div>
+                                <p>Stanford, BSc. Computer Science</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="skill">
+                    <h3 class="skill__title">Skills</h3>
+                    <ul class="skill__list">
+                        <li class="skill__item">
+                            <div>Languages</div>
+                            <ul>
+                                <li>Swift</li>
+                                <li>Objective-C</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </li>
+                        <li class="skill__item">
+                            <div>Languages</div>
+                            <ul>
+                                <li>Swift</li>
+                                <li>Objective-C</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </li>
+                        <li class="skill__item">
+                            <div>Languages</div>
+                            <ul>
+                                <li>Swift</li>
+                                <li>Objective-C</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </li>
+                        <li class="skill__item">
+                            <div>Languages</div>
+                            <ul>
+                                <li>Swift</li>
+                                <li>Objective-C</li>
+                                <li>Ruby</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>

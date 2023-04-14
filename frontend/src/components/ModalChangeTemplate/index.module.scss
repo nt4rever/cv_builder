@@ -1,0 +1,186 @@
+@import '@/assets/styles/scss/global/_mixins.scss';
+
+.root {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 200%;
+    z-index: 9999;
+    background: #f2f7fc;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    @include desktop {
+        width: 1200px;
+    }
+}
+
+.buttonClose {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+
+    @include mobile {
+        left: 20px;
+    }
+}
+
+.title {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #000;
+    text-align: center;
+    font-family: 'Fira Code', sans-serif;
+
+    @include mobile {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
+
+.categories {
+    margin-top: 33px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        border-radius: 28px;
+        padding: 0 4px;
+        background: rgba(227, 233, 239, 0.5);
+
+        @include mobile {
+            margin: 0 15px;
+        }
+    }
+
+    .categoryItem {
+        padding: 8px 24px;
+        font-size: 17px;
+        line-height: 27px;
+        font-weight: 400;
+        cursor: pointer;
+
+        &:global(.activeItem) {
+            background: #fff;
+            border-radius: 24px;
+        }
+
+        @include mobile {
+            flex: 1 1;
+            text-align: center;
+        }
+    }
+}
+
+.wrapper {
+    margin: 50px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 24px;
+
+    .template {
+        width: calc(100% / 3 - 16px);
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .image {
+            background: #d9d9d9;
+            position: relative;
+
+            img {
+                padding: 15px;
+                width: 100%;
+                aspect-ratio: 3/4;
+            }
+
+            .overlayContainer {
+                position: absolute;
+                top: 15px;
+                bottom: 18px;
+                left: 15px;
+                right: 15px;
+                overflow: hidden;
+
+                .overlay {
+                    top: 60%;
+                    position: relative;
+                    height: 45%;
+                    background: linear-gradient(180deg, #ffffff 0%, rgba(17, 50, 85, 0.3) 100%);
+                    transform: translateY(150%);
+
+                    button {
+                        padding: 15px 16px;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 65px;
+                        transform: translateX(-50%);
+                        border: none;
+                        border-radius: 8px;
+                        color: #fff;
+                        background: #2a3ffb;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 15px;
+                        cursor: pointer;
+
+                        @include mobile {
+                            min-width: 60%;
+                            padding: 15px 15px;
+                            display: block !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .overlay {
+                animation: slide 0.3s forwards;
+            }
+        }
+
+        .information {
+            margin-top: 15px;
+
+            .name {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 27px;
+            }
+
+            .description {
+                margin-top: 5px;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(150%);
+    }
+    50% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

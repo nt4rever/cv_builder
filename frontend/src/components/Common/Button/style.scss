@@ -1,0 +1,21 @@
+@use '@/assets/styles/scss/global/global.scss' as *;
+
+.btn-common {
+    font-family: 'Inter', sans-serif;
+    @include flex(center, center);
+    background: #2a3ffb;
+    border-radius: 8px;
+    border: none;
+    color: $txt-white;
+    padding: 17px 70px;
+    font-size: 15px;
+    line-height: 15px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.btn-common:hover {
+    scale: 1.05;
+}
+.img-common {
+    margin-left: 12px;
+}

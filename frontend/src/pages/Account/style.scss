@@ -1,0 +1,249 @@
+.account {
+    width: auto;
+    background: #f2f7fc;
+    margin: 0 232px 100px;
+    text-align: left;
+    .MuiOutlinedInput-root:focus-within {
+        border: 2px solid #2A3FFB ;
+    }
+    .account__title {
+        margin: 74px 0 48px;
+        font-family: 'Fira Code';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        color: #1e2532;
+    }
+    .account__label {
+        font-weight: 400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 20px;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+    .account__frame {
+        width: auto;
+        background: #ffffff;
+        margin-bottom: 24px;
+        .frame__note {
+            width: 100%;
+            padding: 0 40px;
+            .frame__under {
+                display: flex;
+                margin-top: 24px;
+            }
+            .frame__top {
+                display: flex;
+                width: 100%;
+                padding-top: 32px;
+                
+            }
+        }
+        .frame__text {
+            width: 50%;
+            label {
+                font-family: 'Inter';
+                font-style: normal;
+                font-size: 14px;
+                width: auto;
+                color: #000000;
+                display: block;
+                margin-bottom: 6px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+            }
+        }
+        .frame__left {
+            margin-right: 40px;
+            width: 100%;
+        }
+    }
+    .account__save {
+        text-align: right;
+        padding: 24px 40px 32px 0;
+        button {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 24px;
+            color: #2ce5ae;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    }
+    .account__delete {
+        background: #ffffff;
+        border-radius: 6px;
+        width: auto;
+        padding: 32px 40px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: space-between;
+        button {
+            font-size: 16px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            color: #fb4458;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        .account {
+            width: 100%;
+            background: #f2f7fc;
+            margin: 0;
+            margin-bottom: 100px;
+            .account__title {
+                margin: 74px 0 48px;
+                font-family: 'Fira Code';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 36px;
+                color: #1e2532;
+            }
+            .account__frame {
+                background: #ffffff;
+                margin-bottom: 24px;
+                .frame__note {
+                    width: 100%;
+                    padding-top: 32px;
+                    padding: 0 20px;
+                    display: inline-block;
+                    .frame__top {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .frame__under {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .frame__text {
+                    width: 100%;
+                    padding-bottom: 20px;
+                    label {
+                        width: auto;
+                    }
+                }
+            }
+            .account__save {
+                padding: 0px 20px 32px 0;
+            }
+            .account__delete {
+                font-size: 14px;
+                padding: 32px 16px;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        .account {
+            width: calc(100% - 50px);
+            background: #f2f7fc;
+            margin: 0 72px 100px;
+            padding-right: 72px;
+            .account__title {
+                margin: 74px 0 48px;
+                font-family: 'Fira Code';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 36px;
+                color: #1e2532;
+            }
+
+            .account__frame {
+                background: #ffffff;
+                margin-bottom: 24px;
+                .frame__text {
+                    label {
+                        width: 100%;
+
+                        margin-right: 40px;
+                    }
+                }
+            }
+
+            .account__delete {
+                height: auto;
+                font-size: 12px;
+                line-height: 15px;
+                span {
+                    margin-right: 103px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        .account {
+            width: calc(100% - 50px);
+            background: #f2f7fc;
+            margin: 0 72px 100px;
+            padding-right: 72px;
+            .account__title {
+                margin: 74px 0 48px;
+                font-family: 'Fira Code';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 36px;
+                color: #1e2532;
+            }
+
+            .account__frame {
+                width: 100%;
+                background: #ffffff;
+                margin-bottom: 24px;
+                .frame__note {
+                    .frame__under {
+                        display: flex;
+                        margin-top: 24px;
+                    }
+                }
+                .frame__text {
+                    label {
+                        width: 100%;
+                        margin-right: 40px;
+                        color: #000000;
+                    }
+                }
+            }
+
+            .account__delete {
+                height: auto;
+                font-size: 15px;
+                line-height: 15px;
+                span {
+                    margin-right: 103px;
+                }
+            }
+        }
+    }
+}

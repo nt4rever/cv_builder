@@ -1,0 +1,36 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Confirm page</title>
+    <link rel='preconnect' href='https://fonts.gstatic.com' />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'
+      rel='stylesheet'
+    />
+    <link rel='stylesheet' href='/css/confirm.css' />
+  </head>
+  <body>
+    <div class='wrapper'>
+
+      {{#if url}}
+        <img
+          src='https://res.cloudinary.com/dnviwhjey/image/upload/v1678161880/cv_builder/email/Screenshot_2023-03-07_110242_bqkesx.png'
+          alt='icon'
+          class='photo'
+        />
+        <h1 class='title'>Thank you for your registration</h1>
+        <p class='message'>
+          {{message}}
+        </p>
+        <a href='{{url}}' class='button'>Continue</a>
+      {{else}}
+        <h1 class='title' style='color: #ea4c89'>Error :((</h1>
+        <p class='message'>
+          {{message}}
+        </p>
+      {{/if}}
+    </div>
+  </body>
+</html>
