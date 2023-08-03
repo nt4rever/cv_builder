@@ -96,7 +96,11 @@ export class ShareService {
   }
 
   async printPDF(cvUrl: string) {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+      headless: true,
+      executablePath: '/usr/bin/google-chrome', //only enable for linux / docker
+      args: ['--no-sandbox', '--disable-gpu'],
+    });
     const page = await browser.newPage();
     await page.setViewport({
       width: 8.5 * 96,
@@ -111,7 +115,11 @@ export class ShareService {
   }
 
   async printPNG(cvUrl: string) {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+      headless: true,
+      executablePath: '/usr/bin/google-chrome', //only enable for linux / docker
+      args: ['--no-sandbox', '--disable-gpu'],
+    });
     const page = await browser.newPage();
     await page.setViewport({
       width: 1000,

@@ -1,0 +1,22 @@
+services:
+  api:
+    container_name: api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+  app:
+    container_name: app
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+    depends_on:
+      - api
+    env_file:
+      - ./frontend/.env

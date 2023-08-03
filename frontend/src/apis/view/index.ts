@@ -15,7 +15,7 @@ export const getViewCV = (payload: { access_token?: string; cvId: string }) => {
 };
 
 export const getExportFile = (payload: { access_token: string; cvId: string; type: 'PDF' | 'PNG' }) => {
-    const baseURL = process.env.REACT_APP_URL || 'http://localhost:3000';
+    const baseURL = process.env.REACT_APP_URL || window.location.origin;
     const apiURL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
     const cvUrl = `${baseURL}/${payload.cvId}/view?token=${payload.access_token}&print_mode=yes`;
     return axios.post(
@@ -31,7 +31,7 @@ export const getExportFile = (payload: { access_token: string; cvId: string; typ
 };
 
 export const saveThumbnail = (payload: { access_token: string; cvId: string }) => {
-    const baseURL = process.env.REACT_APP_URL || 'http://localhost:3000';
+    const baseURL = process.env.REACT_APP_URL || window.location.origin;
     const apiURL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
     const cvUrl = `${baseURL}/${payload.cvId}/view?token=${payload.access_token}&print_mode=yes`;
     return axios.post(

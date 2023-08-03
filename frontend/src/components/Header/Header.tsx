@@ -105,11 +105,16 @@ function Header() {
     };
 
     if (token) {
-        const decoded: IToken = jwt_decode(token);
-        const expirationTime = decoded.exp * 1000;
+        try {
+            const decoded: IToken = jwt_decode(token);
+            const expirationTime = decoded.exp * 1000;
 
-        if (Date.now() > expirationTime) {
-            handleLogOut();
+            if (Date.now() > expirationTime) {
+                handleLogOut();
+            }
+        } catch (error) {
+            localStorage.clear();
+            console.log(error);
         }
     }
 

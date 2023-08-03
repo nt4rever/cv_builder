@@ -5,9 +5,11 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder } from '@nestjs/swagger';
 import { SwaggerModule } from '@nestjs/swagger/dist';
 import { AppModule } from './app.module';
+import * as morgan from 'morgan';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
+  app.use(morgan('tiny'));
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
